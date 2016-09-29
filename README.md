@@ -1,2 +1,1 @@
-# chenx-bob.github.io
-This is my BLOG
+我的个人博客
