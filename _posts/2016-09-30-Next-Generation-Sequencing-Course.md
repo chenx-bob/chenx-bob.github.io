@@ -12,7 +12,7 @@ author: chenx-bob
 {:toc}
 
 经常听到一些计算机术语，一知半解很久，作为一个天天搞计算的人来说很惭愧，今天决心看一下处理器中的几个概念。
-![1](https://drive.google.com/open?id=0B61nUdVuwHeWSkNhdTB4d215LUk)
+![1](http://api-t.yunpan.360.cn/intf.php?method=File.getThumbByNid&qid=144088929&nid=14752269419492908&size=800_600&devtype=web&v=1.0.1&rtick=14752280978670&sign=04bb16eb48a7f047f1d9ce6c6ed198ae&)
 
 
 
