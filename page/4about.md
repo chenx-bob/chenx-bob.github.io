@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-111222
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 ---
 layout: page
 title: About
