@@ -12,7 +12,10 @@ icon: bookmark
 ## 其他博客
 
 * [生信菜鸟团](http://www.bio-info-trainee.com/)
-
+* [沈梦圆的博客](http://shemy.site)
+* [HOPE](http://tiramisutes.github.io)
+* [生信客部落](http://www.bio-info-club.com)
+* [Bob's Blog](http://www.tanboyu.com/)
 
 
 
