@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  first
-categories: bioinformatics
-tags: xx
-keywords: xx
+title:  计算机概念（一）：处理器
+categories: 计算机
+tags: computer
+keywords: computer Processer
 description: xx
 author: chenx-bob
 ---
@@ -11,16 +11,20 @@ author: chenx-bob
 * content
 {:toc}
 
-
-The first line. Hello word!
-
-
+经常听到一些计算机术语，一知半解很久，作为一个天天搞计算的人来说很惭愧，今天决心看一下处理器中的几个概念。
+[1](https://www.baidu.com)
 
 
 
 
-### title 1：
-http://o7zaxp1i2.bkt.clouddn.com/NGS.png
 
-### title 2：
+### 处理器概念
+先来说处理器搜一下几个概念，总结如下：
+
+
+
+
+
+
+版权声明：本文为博主原创文章，未经博主允许不得转载。
 
