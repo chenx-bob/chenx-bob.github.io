@@ -108,6 +108,8 @@ GenePattern团队和其合作者共同维护几个公共服务器包括[GenePatt
 #### GenePattern社区GParc
 [GParc](http://gparc.org/)是一个用户存储器和社区，可以用于分享和讨论用户自己的分析模块。这些模块都没有被GenePattern测试。
 
+![6](https://cl.ly/0n1y2U2b0D1q/Screen%20Recording%202016-10-16%20at%2010.41%20PM.gif)
+
 > **How to Install a Module or Pipeline from GPARC**
 
 GenePattern versions 3.6.1 and higher offer the ability to install a module directly from GPARC. Users must first be granted the permission to install modules by the server administrator. On the Install Modules page, the user can choose a repository from a drop-down menu. A description of the selected repository explains the curation and quality level of the modules it contains.
