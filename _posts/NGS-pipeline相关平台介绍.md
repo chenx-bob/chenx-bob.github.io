@@ -27,13 +27,13 @@ NGS的发展以及与其相关的分析方法发展被认为是精准医疗的�
 
 **“** GenomeSpace started as a partnership between the Mesirov and Regev laboratories at the Broad Institute, the Chang laboratory at Stanford University, the Ideker laboratory at the University of California, San Diego, the Nekrutenko laboratory at Pennsylvania State University, the Segal laboratory at the Weizmann Institute of Science, and the Haussler and Kent laboratories at the University of California, Santa Cruz.  **”**
 
-GenomeSpace集成工具能快速完成一个敏捷可用的框架，允许工具保有本身的特性并无缝衔接。当前框架下的[工具清单](http://www.genomespace.org/support/tools)。
-
-#### GenomeSpace功能
+GenomeSpace所拥有的功能：
 
 1. GenomeSpace为在其框架下所有工具之间的交互提供服务。
 2. GenomeSpace本身为个人用户提供30GB的数据存储，还提供包括Dropbox，Google Drive和Amazon S3云存储服务器的数据连接服务，此外GS-based一些工具本身就提供了数据都可以链接到GS框架下。
 3. GenomeSpace最为重要的是提供了特定生物信息数据分析的配方，通过使用了GS-based的工具。这个配方还包括如何在GS框架下架设pipeline以及数据如何上下传。
+
+GenomeSpace集成工具能快速完成一个敏捷可用的框架，允许工具保有本身的特性并无缝衔接。当前框架下的[工具清单](http://www.genomespace.org/support/tools)。
 
 #### GenomeSpace Recipes
 GenomeSpace配方（[GenomeSpace Recipes](http://recipes.genomespace.org/home)）就是一个复杂的生物信息学分析的标准流程，也就是Best Practices for bioinformatics analysis。配方要回答的问题小到“如何从RNA－seq的数据中移除接头序列？”，大到“NGS数据分析的标准流程？”。
@@ -44,15 +44,87 @@ GenomeSpace配方（[GenomeSpace Recipes](http://recipes.genomespace.org/home)�
 
 ![2](https://cl.ly/393I442A1d2H/Screen%20Recording%202016-10-15%20at%2012.14%20PM.gif)
 
+----
 
 ### Galaxy
+#### Galaxy简介
+[Galaxy](https://usegalaxy.org/)计划是由美国NSF（National Science Foundation），NHGRI（National Human Genome Research Institute），The Huck Institutes of the Life Sciences，The Institute for CyberScience at Penn State以及Johns Hopkins University共同支持建立的。他的团队主要来自于Hopkins的[生物学院](http://www.bio.jhu.edu/)和penn state的[比较遗传学和生物信息学中心](http://www.bx.psu.edu/)。
+
+Galaxy是真正意义上的NGS数据分析平台，因为其本身是提供分析流程和代码的，而GenomeSpace只是综合这些平台的框架可以无缝衔接这些平台（Galaxy和后面将要提到的GenPattern都是被其框架整合的平台）。在Galaxy中整合了各种工具可以随意的创建自己的流程（也可以叫配方），可以是小的比对分析也可以是大的RNA－seq分析流程。
+
+![3](https://cl.ly/2E1R0Z3o462d/Screen%20Recording%202016-10-16%20at%2007.56%20PM.gif)
+
+**”** Galaxy is an open, web-based platform for accessible, reproducible, and transparent computational biomedical research.
+
+* Accessible: Users without programming experience can easily specify parameters and run tools and workflows.
+* Reproducible: Galaxy captures information so that any user can repeat and understand a complete computational analysis.
+* Transparent: Users share and publish analyses via the web and create Pages, interactive, web-based documents that describe a complete analysis.
+
+#### Galaxy Tool Shed
+Tool shed运行在[http://toolshed.g2.bx.psu.edu](http://toolshed.g2.bx.psu.edu)充当世界范围内Galaxies的App Store。Tool shed是一个免费服务托管存储器包含[Galaxy Tools](https://wiki.galaxyproject.org/Admin/Tools)，[Data Managers](https://wiki.galaxyproject.org/Admin/Tools/DataManagers)和[Galaxy Workflows](https://wiki.galaxyproject.org/Learn/AdvancedWorkflow)。Tool shed允许Galaxy管理员去安装免费的可用的Galaxy工具，也可以管理外部工具依赖性和工具更新。此外，它允许工具开发者去容易分享，更新和管理他们的工具在Galaxy上。
+
+![4](https://cl.ly/1Q2c1A0z1L2s/Screen%20Recording%202016-10-16%20at%2008.34%20PM.gif)
+
+Tool shed主要目标就是支持工具进入任何Galaxy服务器，为此你不需要知道Tool shed的太多内部框架，因为这些Tool shed都已经为你考虑好了，你只需执行简单的操作。安装被描述在[添加工具指南](https://wiki.galaxyproject.org/Admin/Tools/AddToolFromToolShedTutorial)。
+
+#### Galaxy Workflow (Recipes)
+Galaxy计划鼓励分享，分享一切可以分享的资源，方法。如果支持分享，用户可以通过学习[视频](http://vimeo.com/galaxyproject/sharepublish)去分享自己的Galaxy Items，具体包括流程历史，流程，可视化以及页面。
+
+**Galaxy Workflow是什么？** 流程是一系列工具和数据集的操作用于对基因数据批量操作。
+
+**如何创建Galaxy Workflow？** Galaxy流程能被快速的通过操作的历史生成；可以被流程编辑器编辑；可以被注释、浏览、分享、发布、像Galaxy object一样导入。
+
+**现有的Galaxy Workflow有哪些？** 在Galaxy的公共服务器[usegalaxy.org](https://usegalaxy.org)中有用户分享和发表的流程[清单](https://usegalaxy.org/workflow/list_published)。在如何使用的[Galaxy learn](https://wiki.galaxyproject.org/Learn)页面也提供了一些流程的使用指南。
+
+下面是了几个WGS的分析流程：
+
+* [NIH Bioinformatics Courses](http://nihlibrary.ors.nih.gov/bioinfo/)
+* The Genomics Virtual Lab [Galaxy Tutorials](https://www.genome.edu.au/learn/#Variant_Calling)
+* [SNP and Indel Detection](https://sites.google.com/site/princetonhtseq/tutorials/snp-and-indel-detection)
+
+#### Galaxy Servers
+Galaxy计划的[公共服务器](http://usegalaxy.org/)能满足大部分计算资源包括软件的提供的需求，但是不能满足世界范围内所有用户的需求。然而[Galaxy社区](https://wiki.galaxyproject.org/Admin/GetGalaxy)可以通过安装Galaxy在任何服务器端运行。一些研究所和开源组织、社区也提供了他们的安装了Galaxy的服务器，用户也可以公布自己的服务器，为社区驱动形式带动NGS技术发展。Galaxy wiki提供了一个提供Galaxy服务的公共服务器[清单](https://wiki.galaxyproject.org/PublicGalaxyServers)，可以通过这个渠道发布自己的公共或者半公共Galaxy服务器地址。
+
+Galaxy是一个公开免费可以自由访问的资源。它的数据传输和存储都是不经过加密的。所以如果存在protected数据最好建立一个本地的Galaxy sever或者在私有云端运行。另外在线的Galaxy服务存储空间有限，如果大批量运行流程最好本地化。
+
+-----
+
+### GenePattern
+[GenePattern](http://software.broadinstitute.org/cancer/software/genepattern/)是由美国NCI（National Cancer Institute）和NIGMS（National Institute of General Medical Sciences）资助，[MIT & Havard Broad Institute](http://www.broadinstitute.org/)发起和维护的项目，目的在建立一个可以复制的生物信息学平台。它相对于GennomeSpace也是一个真正意义上的NGS分析平台，GenePattern也加入了GenomeSpace。
+
+![5](https://cl.ly/0F0q0J3t1E2h/Screen%20Recording%202016-10-16%20at%2010.36%20PM.gif)
+
+GenePattern内容的发展是通过[社区](http://gparc.org/)驱动的。[GenePattern论坛](https://groups.google.com/a/broadinstitute.org/forum/#!forum/gp-forum)是为乐促进GenePattern平台发展，更好的维护平台而建立。通过发展，当前GenePattern拥有：
+
+1. 强大的基因组学分析工具集成。提供上百个分析工具为包括RNA、DNA、Protein、网络等数据的分析。工具都是使用web界面与用户交互，无需编程经验。
+2. NGS分析流程（也提供Proteomics的分析流程）。为重复性数据分析研究创建和部署复杂的计算分析方法或者计算流程。
+3. 可重复的研究。对于计算型研究，流程中包含必要完整的信息确保流程的可复制性。
+4. 提供programmatic interface程序界面。平台不仅提供web界面为没有程序背景的用户使用也提供程序界面方便程序模块更加优越的实现。
 
 
+#### GenePattern server
+GenePattern团队和其合作者共同维护几个公共服务器包括[GenePattern@Broad](https://genepattern.broadinstitute.org/gp)和[GenePattern@Indiana University](http://gp.indiana.edu/gp/)和一个私有的服务器[GenePattern @ Broad (Internal)](https://gpbroad.broadinstitute.org/gp)。公共服务器可以通过注册使用，在其上面没有安装任何软件。为了更好的使用，用户可以[本地化包](http://software.broadinstitute.org/cancer/software/genepattern/download)本地化GenePattern，可以使用自有模块和通过加入自己的模块完成分析。
 
+#### GenePattern社区GParc
+[GParc](http://gparc.org/)是一个用户存储器和社区，可以用于分享和讨论用户自己的分析模块。这些模块都没有被GenePattern测试。
 
-  
-  
-  
+> **How to Install a Module or Pipeline from GPARC**
+
+GenePattern versions 3.6.1 and higher offer the ability to install a module directly from GPARC. Users must first be granted the permission to install modules by the server administrator. On the Install Modules page, the user can choose a repository from a drop-down menu. A description of the selected repository explains the curation and quality level of the modules it contains.
+
+For more information on GPARC modules, including the community discussion and ranking features, a link to the GPARC website is also provided in the navigation bar under Downloads.
+
+> **How to Submit a Module or Pipeline to GPARC from GenePattern**
+
+From the Module Integrator, a module author now has a new button labeled “Submit to GPARC.” Selecting this button displays instructions for the two-step process:
+
+* Exporting and downloading a .zip of the module
+* Submiting to GPARC, which takes the module author to the GPARC submission page.
+
+The dialog also checks to be sure that the latest edits to the module have been saved, and that the module has documentation attached - a requirement for GPARC submission. The module author will either need to log in or create a new GPARC account in order to submit their module.
+
+Underneath the Submit to GPARC button is a link to an explanation of what GPARC is and its use to the GenePattern user community.
+
 
   
 > 版权声明：本文为博主原创文章，未经博主允许不得转载。
