@@ -15,9 +15,10 @@ icon: heart
 ## 联系我
 
 * GitHub：[chenx-bob](https://github.com/chenx-bob)
-* email：xiangchen1980@gmail.com
+* Email：xiangchen1980@gmail.com
 * [知乎](https://www.zhihu.com/people/cxianger)
 * [豆瓣]（https://www.douban.com/people/83205134/）
+
 
 
 ## 关于本站
